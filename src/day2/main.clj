@@ -22,13 +22,11 @@
   (let [count (get (frequencies pw) ch)]
     (and (not (nil? count)) (<= min count) (>= max count))))
 
-(prn :part-1 (->> input (filter valid-pw-part1?) count))
-
 (defn valid-pw-part2? [{:keys [min max ch pw]}]
   (let [fst (= ch (nth pw (dec min)))
         snd (= ch (nth pw (dec max)))]
     (or (and fst (not snd))
         (and snd (not fst)))))
 
-
-(prn :part-1 (->> input (filter valid-pw-part2?) count))
+(prn :part-1 (->> input (filter valid-pw-part1?) count))
+(prn :part-2 (->> input (filter valid-pw-part2?) count))

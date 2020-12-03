@@ -26,9 +26,6 @@
         (> result target) (recur increasing (rest decreasing))
         :else             (recur (rest increasing) decreasing)))))
 
-;; part 1
-(prn :part-1 (apply * (find-target-sum input 2020)))
-
 (defn find-target-sum-triplet [sorted-input target]
   (loop [items sorted-input]
     (let [item       (first items)
@@ -39,7 +36,5 @@
         (nil? result) (recur (rest items))
         :else         [item (first result) (second result)]))))
 
-;; part2
+(prn :part-1 (apply * (find-target-sum input 2020)))
 (prn :part-2 (apply * (find-target-sum-triplet input 2020)))
-
-
