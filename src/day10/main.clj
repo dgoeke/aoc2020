@@ -36,3 +36,4 @@
      (let [target (apply max input)
            graph  (into {} (map (partial find-connections input) input))]
        (count-paths graph 0 target)))
+
