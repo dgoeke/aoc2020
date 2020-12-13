@@ -22,7 +22,7 @@
                     first
                     (apply *))))
 
-;; part 2: find x such that
+;; part 2: with a schedule: "7,13,x,x,59,x,31,19", find x such that
 ;;
 ;; x       % 7  = 0   implies   x %  7 =  0
 ;; (x + 1) % 13 = 0   implies   x % 13 = 12
