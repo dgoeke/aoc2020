@@ -40,5 +40,5 @@
                   ((juxt :x :y)) (map #(Math/abs %)) (reduce +)))
 
 (prn :part-2 (->> input
-                  (reduce step-part-2 {:x 10 :y 1 :my-x 0 :my-y 0 :dir 0})
+                  (reduce step-part-2 {:x 10 :y 1 :my-x 0 :my-y 0})
                   ((juxt :my-x :my-y)) (map #(Math/abs %)) (reduce +)))
